@@ -50,7 +50,7 @@ rag_template = ChatPromptTemplate.from_template(
 )
 #-----------------------------------------------------------RAG-------------------------------------------------------------------------------------
 def retrieval_augmented_generation():
-    llm = ChatGroq(model="Llama3-8b-8192")
+    llm = ChatGroq(model="Gemma2-9b-It")
     def delete_files_directory(directory):
         for file in os.listdir(directory):
             file_path = os.path.join(directory,file)
@@ -344,10 +344,10 @@ if username=="admin" and password=="admin":
     if selected=="RAG QUERY":
         retrieval_augmented_generation()
     # elif selected == "Chat With SQL":
-    #     st.session_state.messages=None
-    #     chat_with_sql()
+        # st.session_state.messages=None
+        # chat_with_sql()
     elif selected=="ChatBot":
-        chatbot()
+        chatbot()#password is Ammar5352
     elif selected=="YTube URL Summarize":
         url_summarization()
     else:
